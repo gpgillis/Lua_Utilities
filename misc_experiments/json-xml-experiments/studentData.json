@@ -1,0 +1,44 @@
+{
+  "AllStudents": [
+    {
+      "FirstName": "Bill",
+      "LastName": "Wagner",
+      "Id": 1
+    },
+    {
+      "FirstName": "Chuck",
+      "LastName": "Finley",
+      "Id": 2
+    },
+    {
+      "FirstName": "John",
+      "LastName": "Foley",
+      "Id": 3
+    },
+    {
+      "FirstName": "Sheri",
+      "LastName": "Green",
+      "Id": 4
+    },
+    {
+      "FirstName": "Mary",
+      "LastName": "Logan",
+      "Id": 5
+    },
+    {
+      "FirstName": "Jeff",
+      "LastName": "Williams",
+      "Id": 6
+    },
+    {
+      "FirstName": "Ashley",
+      "LastName": "Jordan",
+      "Id": 7
+    },
+		{
+		  "FirstName": "Bob",
+			"LastName": "BigKitty",
+			"Id": 8
+		}
+  ]
+}

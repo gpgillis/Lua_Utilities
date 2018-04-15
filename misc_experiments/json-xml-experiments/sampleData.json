@@ -1,0 +1,753 @@
+{
+  "AllStudents": [
+    {
+      "FirstName": "Bill",
+      "LastName": "Wagner",
+      "Id": 1
+    },
+    {
+      "FirstName": "Chuck",
+      "LastName": "Finley",
+      "Id": 2
+    },
+    {
+      "FirstName": "John",
+      "LastName": "Foley",
+      "Id": 3
+    },
+    {
+      "FirstName": "Sheri",
+      "LastName": "Green",
+      "Id": 4
+    },
+    {
+      "FirstName": "Mary",
+      "LastName": "Logan",
+      "Id": 5
+    },
+    {
+      "FirstName": "Jeff",
+      "LastName": "Williams",
+      "Id": 6
+    },
+    {
+      "FirstName": "Ashley",
+      "LastName": "Jordan",
+      "Id": 7
+    },
+		{
+		  "FirstName": "Bob",
+			"LastName": "BigKitty",
+			"Id": 8
+		}
+  ],
+  "AllCourses": [
+    {
+      "Id": 1,
+      "Title": "Test Driven Development",
+      "Description": "Really cool testing strategies"
+    },
+    {
+      "Id": 2,
+      "Title": "Beginning C#",
+      "Description": "Intro Develpment course"
+    },
+    {
+      "Id": 3,
+      "Title": "Web Design for Developers",
+      "Description": "Learn to avoid the Blink tag"
+    },
+    {
+      "Id": 4,
+      "Title": "Async Practices",
+      "Description": "Async, await, and parallel bug creation"
+    },
+    {
+      "Id": 5,
+      "Title": "Agile and Scrum",
+      "Description": "Because a trend this popular must have a class"
+    },
+    {
+      "Id": 6,
+      "Title": "Lean Practices",
+      "Description": "Avoiding Waste"
+    },
+    {
+      "Id": 7,
+      "Title": "TypeScript and Angular",
+      "Description": "Maximizing release incompatibilities"
+    },
+    {
+      "Id": 8,
+      "Title": "Basic Algorithms",
+      "Description": "The things every developer must know"
+    },
+    {
+      "Id": 9,
+      "Title": "Continuous Deployment",
+      "Description": "Pushing bugs to production as fast as possible"
+    },
+    {
+      "Id": 10,
+      "Title": "Zen and the art of Software Maintenance",
+      "Description": "Because so many developers are too young to get this joke"
+    },
+    {
+      "Id": 11,
+      "Title": "Building Effective Teams",
+      "Description": "It's about more than ping pong"
+    },
+    {
+      "Id": 12,
+      "Title": "Herding Cats for Fun and Profit",
+      "Description": "This course will almost prepare you for managing developers"
+    },
+    {
+      "Id": 13,
+      "Title": "Building Unmaintainable Systems",
+      "Description": "Because legacy systems don't just happen"
+    },
+    {
+      "Id": 14,
+      "Title": "Obfuscating code to enhance job security",
+      "Description": "Because everyone needs a role"
+    },
+    {
+      "Id": 15,
+      "Title": "Database design for exponential query performance",
+      "Description": "Build in terrible performance so you have room to improve in release 2.0"
+    }
+  ],
+  "AllEnrollments": [
+    {
+      "Id": 1,
+      "StudentId": 1,
+      "CourseId": 1,
+      "LetterGrade": 2
+    },
+    {
+      "Id": 2,
+      "StudentId": 1,
+      "CourseId": 2,
+      "LetterGrade": 0
+    },
+    {
+      "Id": 3,
+      "StudentId": 1,
+      "CourseId": 3,
+      "LetterGrade": 3
+    },
+    {
+      "Id": 4,
+      "StudentId": 1,
+      "CourseId": 4,
+      "LetterGrade": 0
+    },
+    {
+      "Id": 5,
+      "StudentId": 1,
+      "CourseId": 5,
+      "LetterGrade": 1
+    },
+    {
+      "Id": 6,
+      "StudentId": 1,
+      "CourseId": 6,
+      "LetterGrade": 2
+    },
+    {
+      "Id": 7,
+      "StudentId": 1,
+      "CourseId": 7,
+      "LetterGrade": 3
+    },
+    {
+      "Id": 8,
+      "StudentId": 1,
+      "CourseId": 8,
+      "LetterGrade": 0
+    },
+    {
+      "Id": 9,
+      "StudentId": 1,
+      "CourseId": 9,
+      "LetterGrade": 1
+    },
+    {
+      "Id": 10,
+      "StudentId": 1,
+      "CourseId": 10,
+      "LetterGrade": 3
+    },
+    {
+      "Id": 11,
+      "StudentId": 1,
+      "CourseId": 11,
+      "LetterGrade": 1
+    },
+    {
+      "Id": 12,
+      "StudentId": 1,
+      "CourseId": 12,
+      "LetterGrade": 0
+    },
+    {
+      "Id": 13,
+      "StudentId": 1,
+      "CourseId": 13,
+      "LetterGrade": 3
+    },
+    {
+      "Id": 14,
+      "StudentId": 1,
+      "CourseId": 14,
+      "LetterGrade": 1
+    },
+    {
+      "Id": 15,
+      "StudentId": 1,
+      "CourseId": 15,
+      "LetterGrade": 2
+    },
+    {
+      "Id": 16,
+      "StudentId": 2,
+      "CourseId": 1,
+      "LetterGrade": 3
+    },
+    {
+      "Id": 17,
+      "StudentId": 2,
+      "CourseId": 2,
+      "LetterGrade": 0
+    },
+    {
+      "Id": 18,
+      "StudentId": 2,
+      "CourseId": 3,
+      "LetterGrade": 2
+    },
+    {
+      "Id": 19,
+      "StudentId": 2,
+      "CourseId": 4,
+      "LetterGrade": 3
+    },
+    {
+      "Id": 20,
+      "StudentId": 2,
+      "CourseId": 5,
+      "LetterGrade": 3
+    },
+    {
+      "Id": 21,
+      "StudentId": 2,
+      "CourseId": 6,
+      "LetterGrade": 0
+    },
+    {
+      "Id": 22,
+      "StudentId": 2,
+      "CourseId": 7,
+      "LetterGrade": 0
+    },
+    {
+      "Id": 23,
+      "StudentId": 2,
+      "CourseId": 8,
+      "LetterGrade": 0
+    },
+    {
+      "Id": 24,
+      "StudentId": 2,
+      "CourseId": 9,
+      "LetterGrade": 3
+    },
+    {
+      "Id": 25,
+      "StudentId": 2,
+      "CourseId": 10,
+      "LetterGrade": 1
+    },
+    {
+      "Id": 26,
+      "StudentId": 2,
+      "CourseId": 11,
+      "LetterGrade": 3
+    },
+    {
+      "Id": 27,
+      "StudentId": 2,
+      "CourseId": 12,
+      "LetterGrade": 0
+    },
+    {
+      "Id": 28,
+      "StudentId": 2,
+      "CourseId": 13,
+      "LetterGrade": 2
+    },
+    {
+      "Id": 29,
+      "StudentId": 2,
+      "CourseId": 14,
+      "LetterGrade": 1
+    },
+    {
+      "Id": 30,
+      "StudentId": 2,
+      "CourseId": 15,
+      "LetterGrade": 3
+    },
+    {
+      "Id": 31,
+      "StudentId": 3,
+      "CourseId": 1,
+      "LetterGrade": 3
+    },
+    {
+      "Id": 32,
+      "StudentId": 3,
+      "CourseId": 2,
+      "LetterGrade": 3
+    },
+    {
+      "Id": 33,
+      "StudentId": 3,
+      "CourseId": 3,
+      "LetterGrade": 0
+    },
+    {
+      "Id": 34,
+      "StudentId": 3,
+      "CourseId": 4,
+      "LetterGrade": 2
+    },
+    {
+      "Id": 35,
+      "StudentId": 3,
+      "CourseId": 5,
+      "LetterGrade": 2
+    },
+    {
+      "Id": 36,
+      "StudentId": 3,
+      "CourseId": 6,
+      "LetterGrade": 0
+    },
+    {
+      "Id": 37,
+      "StudentId": 3,
+      "CourseId": 7,
+      "LetterGrade": 0
+    },
+    {
+      "Id": 38,
+      "StudentId": 3,
+      "CourseId": 8,
+      "LetterGrade": 3
+    },
+    {
+      "Id": 39,
+      "StudentId": 3,
+      "CourseId": 9,
+      "LetterGrade": 2
+    },
+    {
+      "Id": 40,
+      "StudentId": 3,
+      "CourseId": 10,
+      "LetterGrade": 2
+    },
+    {
+      "Id": 41,
+      "StudentId": 3,
+      "CourseId": 11,
+      "LetterGrade": 2
+    },
+    {
+      "Id": 42,
+      "StudentId": 3,
+      "CourseId": 12,
+      "LetterGrade": 0
+    },
+    {
+      "Id": 43,
+      "StudentId": 3,
+      "CourseId": 13,
+      "LetterGrade": 2
+    },
+    {
+      "Id": 44,
+      "StudentId": 3,
+      "CourseId": 14,
+      "LetterGrade": 2
+    },
+    {
+      "Id": 45,
+      "StudentId": 3,
+      "CourseId": 15,
+      "LetterGrade": 3
+    },
+    {
+      "Id": 46,
+      "StudentId": 4,
+      "CourseId": 1,
+      "LetterGrade": 1
+    },
+    {
+      "Id": 47,
+      "StudentId": 4,
+      "CourseId": 2,
+      "LetterGrade": 2
+    },
+    {
+      "Id": 48,
+      "StudentId": 4,
+      "CourseId": 3,
+      "LetterGrade": 2
+    },
+    {
+      "Id": 49,
+      "StudentId": 4,
+      "CourseId": 4,
+      "LetterGrade": 2
+    },
+    {
+      "Id": 50,
+      "StudentId": 4,
+      "CourseId": 5,
+      "LetterGrade": 1
+    },
+    {
+      "Id": 51,
+      "StudentId": 4,
+      "CourseId": 6,
+      "LetterGrade": 3
+    },
+    {
+      "Id": 52,
+      "StudentId": 4,
+      "CourseId": 7,
+      "LetterGrade": 1
+    },
+    {
+      "Id": 53,
+      "StudentId": 4,
+      "CourseId": 8,
+      "LetterGrade": 3
+    },
+    {
+      "Id": 54,
+      "StudentId": 4,
+      "CourseId": 9,
+      "LetterGrade": 2
+    },
+    {
+      "Id": 55,
+      "StudentId": 4,
+      "CourseId": 10,
+      "LetterGrade": 3
+    },
+    {
+      "Id": 56,
+      "StudentId": 4,
+      "CourseId": 11,
+      "LetterGrade": 2
+    },
+    {
+      "Id": 57,
+      "StudentId": 4,
+      "CourseId": 12,
+      "LetterGrade": 3
+    },
+    {
+      "Id": 58,
+      "StudentId": 4,
+      "CourseId": 13,
+      "LetterGrade": 3
+    },
+    {
+      "Id": 59,
+      "StudentId": 4,
+      "CourseId": 14,
+      "LetterGrade": 3
+    },
+    {
+      "Id": 60,
+      "StudentId": 4,
+      "CourseId": 15,
+      "LetterGrade": 1
+    },
+    {
+      "Id": 61,
+      "StudentId": 5,
+      "CourseId": 1,
+      "LetterGrade": 2
+    },
+    {
+      "Id": 62,
+      "StudentId": 5,
+      "CourseId": 2,
+      "LetterGrade": 1
+    },
+    {
+      "Id": 63,
+      "StudentId": 5,
+      "CourseId": 3,
+      "LetterGrade": 2
+    },
+    {
+      "Id": 64,
+      "StudentId": 5,
+      "CourseId": 4,
+      "LetterGrade": 2
+    },
+    {
+      "Id": 65,
+      "StudentId": 5,
+      "CourseId": 5,
+      "LetterGrade": 3
+    },
+    {
+      "Id": 66,
+      "StudentId": 5,
+      "CourseId": 6,
+      "LetterGrade": 2
+    },
+    {
+      "Id": 67,
+      "StudentId": 5,
+      "CourseId": 7,
+      "LetterGrade": 0
+    },
+    {
+      "Id": 68,
+      "StudentId": 5,
+      "CourseId": 8,
+      "LetterGrade": 1
+    },
+    {
+      "Id": 69,
+      "StudentId": 5,
+      "CourseId": 9,
+      "LetterGrade": 2
+    },
+    {
+      "Id": 70,
+      "StudentId": 5,
+      "CourseId": 10,
+      "LetterGrade": 2
+    },
+    {
+      "Id": 71,
+      "StudentId": 5,
+      "CourseId": 11,
+      "LetterGrade": 2
+    },
+    {
+      "Id": 72,
+      "StudentId": 5,
+      "CourseId": 12,
+      "LetterGrade": 1
+    },
+    {
+      "Id": 73,
+      "StudentId": 5,
+      "CourseId": 13,
+      "LetterGrade": 3
+    },
+    {
+      "Id": 74,
+      "StudentId": 5,
+      "CourseId": 14,
+      "LetterGrade": 0
+    },
+    {
+      "Id": 75,
+      "StudentId": 5,
+      "CourseId": 15,
+      "LetterGrade": 1
+    },
+    {
+      "Id": 76,
+      "StudentId": 6,
+      "CourseId": 1,
+      "LetterGrade": 0
+    },
+    {
+      "Id": 77,
+      "StudentId": 6,
+      "CourseId": 2,
+      "LetterGrade": 1
+    },
+    {
+      "Id": 78,
+      "StudentId": 6,
+      "CourseId": 3,
+      "LetterGrade": 1
+    },
+    {
+      "Id": 79,
+      "StudentId": 6,
+      "CourseId": 4,
+      "LetterGrade": 0
+    },
+    {
+      "Id": 80,
+      "StudentId": 6,
+      "CourseId": 5,
+      "LetterGrade": 0
+    },
+    {
+      "Id": 81,
+      "StudentId": 6,
+      "CourseId": 6,
+      "LetterGrade": 0
+    },
+    {
+      "Id": 82,
+      "StudentId": 6,
+      "CourseId": 7,
+      "LetterGrade": 2
+    },
+    {
+      "Id": 83,
+      "StudentId": 6,
+      "CourseId": 8,
+      "LetterGrade": 3
+    },
+    {
+      "Id": 84,
+      "StudentId": 6,
+      "CourseId": 9,
+      "LetterGrade": 3
+    },
+    {
+      "Id": 85,
+      "StudentId": 6,
+      "CourseId": 10,
+      "LetterGrade": 3
+    },
+    {
+      "Id": 86,
+      "StudentId": 6,
+      "CourseId": 11,
+      "LetterGrade": 1
+    },
+    {
+      "Id": 87,
+      "StudentId": 6,
+      "CourseId": 12,
+      "LetterGrade": 3
+    },
+    {
+      "Id": 88,
+      "StudentId": 6,
+      "CourseId": 13,
+      "LetterGrade": 2
+    },
+    {
+      "Id": 89,
+      "StudentId": 6,
+      "CourseId": 14,
+      "LetterGrade": 2
+    },
+    {
+      "Id": 90,
+      "StudentId": 6,
+      "CourseId": 15,
+      "LetterGrade": 0
+    },
+    {
+      "Id": 91,
+      "StudentId": 7,
+      "CourseId": 1,
+      "LetterGrade": 0
+    },
+    {
+      "Id": 92,
+      "StudentId": 7,
+      "CourseId": 2,
+      "LetterGrade": 1
+    },
+    {
+      "Id": 93,
+      "StudentId": 7,
+      "CourseId": 3,
+      "LetterGrade": 0
+    },
+    {
+      "Id": 94,
+      "StudentId": 7,
+      "CourseId": 4,
+      "LetterGrade": 0
+    },
+    {
+      "Id": 95,
+      "StudentId": 7,
+      "CourseId": 5,
+      "LetterGrade": 0
+    },
+    {
+      "Id": 96,
+      "StudentId": 7,
+      "CourseId": 6,
+      "LetterGrade": 0
+    },
+    {
+      "Id": 97,
+      "StudentId": 7,
+      "CourseId": 7,
+      "LetterGrade": 1
+    },
+    {
+      "Id": 98,
+      "StudentId": 7,
+      "CourseId": 8,
+      "LetterGrade": 3
+    },
+    {
+      "Id": 99,
+      "StudentId": 7,
+      "CourseId": 9,
+      "LetterGrade": 2
+    },
+    {
+      "Id": 100,
+      "StudentId": 7,
+      "CourseId": 10,
+      "LetterGrade": 1
+    },
+    {
+      "Id": 101,
+      "StudentId": 7,
+      "CourseId": 11,
+      "LetterGrade": 1
+    },
+    {
+      "Id": 102,
+      "StudentId": 7,
+      "CourseId": 12,
+      "LetterGrade": 0
+    },
+    {
+      "Id": 103,
+      "StudentId": 7,
+      "CourseId": 13,
+      "LetterGrade": 3
+    },
+    {
+      "Id": 104,
+      "StudentId": 7,
+      "CourseId": 14,
+      "LetterGrade": 0
+    },
+    {
+      "Id": 105,
+      "StudentId": 7,
+      "CourseId": 15,
+      "LetterGrade": 3
+    }
+  ]
+}
