@@ -1067,6 +1067,32 @@ function DumpStringToFile(filebase, text, useDateStamp, createNewFile)
 end -- DumpStringToFile
 
 -------------------------------------------------------------------------------
+-- DumpRawFileToBuffer
+--	Dumps a text file to a buffer table with minimal line manipulation.
+--		filename					: FQN filename of file for input
+--		existingBuffer		: an existing buffer to append data to - if nil then a new buffer is used.
+function DumpRawFileToBuffer(filename, allowBlankLines, existingBuffer, removeHeaderLines, honorLuaBlocks)
+	if (filename == "" or filename == nil) then return nil end
+	
+	local buffer = {}
+	if (type(existingBuffer) == "table") then buffer = existingBuffer end
+	
+	local f = io.open(filename, "r")
+	if (f == nil) then return nil end
+	
+	while (true) do
+		local line = f:read("*line")
+		if (line == nil) then break end
+		
+		line = SafeString(line)
+		table.insert(buffer, line)
+	end
+	f:close()
+	
+	return buffer
+end	-- DumpRawFileToBuffer
+
+-------------------------------------------------------------------------------
 -- DumpFileToBuffer
 --	Dumps a text file to a buffer table
 --
@@ -1109,7 +1135,7 @@ function DumpFileToBuffer(filename, allowBlankLines, existingBuffer, removeHeade
 		if (removeHeaderLines > 0) then
 			removeHeaderLines = removeHeaderLines - 1
 		else
-            line = TrimString(SafeString(line))
+			line = TrimString(SafeString(line))
 			if (line ~= "" or allowBlankLines == true) then
 				
 				if (honorLuaBlocks and string.match(line, ".%[%[$")) then
@@ -1346,10 +1372,12 @@ function DelimitedStringToTable(str, delimiter)
 	while (str ~= nil) do
 		local s1,s2 = SplitString(str, delimiter)
 		
-		if (s1 ~= nil) then 
+		if (s1 ~= nil) then
+			DebugMessage("S1 is not nil : " .. s1)
 			table.insert(tbl, s1)
 			str = s2
 		else
+			DebugMessage("S1 is nil str: " .. str)
 			table.insert(tbl, str)
 			break
 		end

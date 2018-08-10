@@ -4,8 +4,7 @@
 -- assists with calculation diagnosis
 --
 
-local gpg = require "gpgUtilities"
-
+local csi = require "csiutilities"
 
 
 -------------------------------------------------------
@@ -18,7 +17,7 @@ local gpg = require "gpgUtilities"
 --		results			:	FQN name of results file.
 function ProcessArguments()
 
-	local flags, strings = gpg.ParseFlags(arg)
+	local flags, strings = csi.ParseFlags(arg)
 
 	local count = 0
 	for _,k in pairs(flags) do
@@ -42,16 +41,16 @@ function ProcessArguments()
 	if table.containsKey(flags, "t") then target = flags["t"] end
 	
 	-- The argument flags with no equation argument may return a 'true' - protect against this.
-	if (gpg.SafeString(logfile) == "true" or logfile == "") then logfile = nil end
-	if (gpg.SafeString(results) == "true" or results == "") then results = nil end 
-	if (gpg.SafeString(target) == "true" or target == "") then target = nil end
+	if (csi.SafeString(logfile) == "true" or logfile == "") then logfile = nil end
+	if (csi.SafeString(results) == "true" or results == "") then results = nil end 
+	if (csi.SafeString(target) == "true" or target == "") then target = nil end
 	
 
-	if (results == nil and gpg.SafeString(logfile) ~= "") then 
-		results = gpg.CreateOutputFileName(logfile, false, "parsed") 
+	if (results == nil and csi.SafeString(logfile) ~= "") then 
+		results = csi.CreateOutputFileName(logfile, false, "parsed") 
 	end
 	
-	if (gpg.SafeString(target) == "") then 
+	if (csi.SafeString(target) == "") then 
 	target = "dumpvars:"	-- Default log parsing to the dumpvars lines.
 	end
 	
@@ -76,11 +75,11 @@ print("Result file : " .. resultsName)
 print("Parse target: " .. target)
 io.write("Processing  : ")
 
-local source = gpg.DumpFileToBuffer(filename, false, nil, 0)
+local source = csi.DumpFileToBuffer(filename, false, nil, 0)
 assert(source, "No buffer was loaded from the specified file.")
-local buffer = gpg.SelfFlushingOutputBuffer(100, resultsName, false, true)
+local buffer = csi.SelfFlushingOutputBuffer(100, resultsName, false, true)
 
-local spinner = gpg.DisplayHack()
+local spinner = csi.DisplayHack()
 
 for _,l in pairs(source) do
 	spinner()

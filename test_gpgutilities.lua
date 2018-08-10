@@ -290,6 +290,27 @@ TestStringFunctions = {}
 		s1, s2 = gpg.SplitString("This string cannot be split", "*")
 		luaunit.assertIsNil(s1)
 		luaunit.assertIsNil(s2)
+		
+		s1, s2 = gpg.SplitString(", This is the second part - there is no first part", ",")
+		luaunit.assertEquals(s1, "")
+		luaunit.assertEquals(s2, " This is the second part - there is no first part")
+
+		s1, s2 = gpg.SplitString("This is the first part - there is no second part, ", ",")
+		luaunit.assertEquals(s1, "This is the first part - there is no second part")
+		luaunit.assertEquals(s2, " ")
+		
+		-- Now tab delimited
+		s1, s2 = gpg.SplitString("This is the first part	this is the second", "\t")
+		luaunit.assertEquals(s1, "This is the first part")
+		luaunit.assertEquals(s2, "this is the second")
+
+		s1, s2 = gpg.SplitString("	This is the second part - there is no first part", "\t")
+		luaunit.assertEquals(s1, "")
+		luaunit.assertEquals(s2, "This is the second part - there is no first part")
+
+		s1, s2 = gpg.SplitString("This is the first part - there is no second part	", "\t")
+		luaunit.assertEquals(s1, "This is the first part - there is no second part")
+		luaunit.assertEquals(s2, "")
 	end
 
 	function TestStringFunctions:testStringIsNilOrEmpty()
@@ -545,6 +566,14 @@ TestTableFunctions = {}
 		local str = "bob|george|ben|tim|tom|tony"
 		local expected = { "bob","george","ben","tim","tom","tony" }
 		luaunit.assertEquals(gpg.DelimitedStringToTable(str, "|"), expected)
+		
+		str = "|bob|george|ben|"
+		expected = {"", "bob", "george", "ben", ""}
+		luaunit.assertEquals(gpg.DelimitedStringToTable(str, "|"), expected)
+		
+		str = "	Status	Code	File	Line	Column	Project	Read/Write	"
+		expected = {"Status", "Code", "File", "Line", "Column", "Project", "Read/Write", ""}
+		luaunit.assertEquals(gpg.DelimitedStringToTable(str, "\t"), expected)
 	end
 
 	-- The CSVStringToTable function calls into the DelimitedStringToTable function 
@@ -554,7 +583,7 @@ TestTableFunctions = {}
 		local expected = { "bob","george","ben","tim","tom","tony" }
 		luaunit.assertEquals(gpg.CSVStringToTable(str), expected)
 	end
-
+	
 	function TestTableFunctions:tearDown()
 		self.testTbl = nil
 	end
