@@ -572,7 +572,7 @@ TestTableFunctions = {}
 		luaunit.assertEquals(gpg.DelimitedStringToTable(str, "|"), expected)
 		
 		str = "	Status	Code	File	Line	Column	Project	Read/Write	"
-		expected = {"Status", "Code", "File", "Line", "Column", "Project", "Read/Write", ""}
+		expected = {"", "Status", "Code", "File", "Line", "Column", "Project", "Read/Write", ""}
 		luaunit.assertEquals(gpg.DelimitedStringToTable(str, "\t"), expected)
 	end
 
